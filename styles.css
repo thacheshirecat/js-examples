@@ -15,6 +15,9 @@ h1 {
 h4 {
     margin: 1%;
 }
+a {
+    display: block;
+}
 input {
     width: 50%;
     display: block;
@@ -59,6 +62,7 @@ a:visited {
     input {
         width: 80%;
     }
+
     .title-img {
         height: 100%;
     }

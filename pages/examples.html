@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>J-J-J-Javascript</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Source+Serif+4&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="../styles.css" />
+    </head>
+    <body>
+        <h1>Examples</h1>
+        <div class="grid-container">
+            <div>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="examples.html">Examples</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div>
+                <img class="title-img" src="../public/doge.jpg" alt="doge" />
+            </div>
+            <div>
+                <h4 id="fun-game"></h4>
+                <button onclick="funGame()">Click</button>
+                <hr />
+                <h4>Make a List</h4>
+                <label for="list-input">Add Item</label>
+                <input type="text" name="list-input" id="list-input" />
+                <button onclick="addToList()">Add</button>
+                <ul id="example-list">
+                    <li id="list-item-1">
+                        Bake a Cake
+                        <button onclick="deleteListItem('list-item-1')">
+                            Delete
+                        </button>
+                    </li>
+                    <li id="list-item-2">
+                        Walk the Doge
+                        <button onclick="deleteListItem('list-item-2')">
+                            Delete
+                        </button>
+                    </li>
+                    <li id="list-item-3">
+                        Code
+                        <button onclick="deleteListItem('list-item-3')">
+                            Delete
+                        </button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="grid-container"></div>
+        <script src="../scripts/examples.js"></script>
+    </body>
+</html>

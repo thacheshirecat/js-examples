@@ -72,4 +72,10 @@ a:visited {
     .grid-container {
         grid-template-columns: 30% 30% 30%;
     }
+
+    #home-grid-2 {
+        grid-template-columns: none;
+        grid-template-rows: auto auto auto;
+        gap: 1%;
+    }
 }

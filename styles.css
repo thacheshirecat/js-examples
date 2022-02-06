@@ -6,7 +6,10 @@ p {
     margin: 1%;
 }
 h1,
-h4 {
+h2,
+h3,
+h4,
+h5 {
     font-family: Arial, Helvetica, sans-serif;
 }
 h1 {
@@ -59,7 +62,25 @@ a:visited {
     border: 3px solid slateblue;
     padding: 1%;
 }
+.shop-container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 1%;
+    padding: 1%;
+    background-color: whitesmoke;
+    opacity: 0.8;
+}
+.shop-container > div {
+    background-color: #e7ded1;
+    border: 3px solid slateblue;
+    padding: 1%;
+}
 
+#clock {
+    display: inline;
+    float: left;
+    font-size: small;
+}
 @media screen and (max-width: 768px) {
     input {
         width: 80%;
@@ -73,6 +94,14 @@ a:visited {
     }
     .grid-container > div {
         border: 3px solid whitesmoke;
+    }
+    .shop-container {
+        grid-template-columns: none;
+        grid-template-rows: auto auto auto;
+        gap: 2%;
+    }
+    .shop-container > article > img {
+        width: 75%;
     }
 
     #home-grid-2 {

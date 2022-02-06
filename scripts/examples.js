@@ -69,6 +69,37 @@ const createFamily = function (cb) {
     document.getElementById('family-list').innerHTML = ``
     cb(namedFamily)
 }
+//Date Stuff
+const date = new Date()
+
+console.log('Date: ' + date.getDate())
+console.log('Day: ' + date.getDay())
+console.log('Month: ' + date.getMonth())
+console.log('Year: ' + date.getFullYear())
+console.log('Hours: ' + date.getHours())
+console.log('Minutes: ' + date.getMinutes())
+console.log('Time: ' + date.getTime())
+
+const timer = function () {
+    const newTime = new Date()
+    const newT = newTime.getTime()
+    const oldT = date.getTime()
+    const difference = ((newT - oldT) / 1000).toFixed(2)
+
+    if (difference >= 60) {
+        const seconds = (difference - Math.floor(difference / 60) * 60).toFixed(
+            2
+        )
+        document.getElementById('clock').innerHTML = `It has been ${Math.floor(
+            difference / 60
+        ).toFixed(0)} minutes and ${seconds} seconds`
+    } else {
+        document.getElementById(
+            'clock'
+        ).innerHTML = `It has been ${difference} seconds`
+    }
+}
 //Methods to run when page initializes
 addToList()
 populateFamily(namelessFamily)
+setInterval(timer, 10)

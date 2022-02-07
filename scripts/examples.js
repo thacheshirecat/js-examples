@@ -11,6 +11,14 @@ let listId = 1
 let listInitialized = false
 //Family Naming Variables
 let namelessFamily = ['Toby', 'LuLu', 'Sparkles', 'JoJo']
+//Shop Variables
+let shopList = [
+    { name: 'Kibble', image: 'kibble.JPG' },
+    { name: 'Ball', image: 'ball.JPG' },
+    { name: 'Chew Toy', image: 'chewtoy.JPG' },
+    { name: 'Shampoo', image: 'shampoo.JPG' },
+    { name: 'Hair Brush', image: 'brush.JPG' },
+]
 //Fun Game Methods
 const funGame = function () {
     funString = funString.slice(1, funString.length).trim()
@@ -99,7 +107,19 @@ const timer = function () {
         ).innerHTML = `It has been ${difference} seconds`
     }
 }
+//Shop
+const initializeShop = function (array) {
+    array.forEach((item) => {
+        document.getElementById('shop-list').innerHTML += `<div>
+                        <h5>${item.name}</h5>
+                        <img src="../public/${item.image}" alt="shop image" />
+                        <p>Delicious ${item.name}</p>
+                        <button>Buy Now!</button>
+                        </div>`
+    })
+}
 //Methods to run when page initializes
 addToList()
 populateFamily(namelessFamily)
+initializeShop(shopList)
 setInterval(timer, 10)
